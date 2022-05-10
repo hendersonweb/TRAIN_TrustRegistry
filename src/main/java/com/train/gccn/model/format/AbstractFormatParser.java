@@ -5,7 +5,6 @@ import com.train.gccn.model.format.eIDAS_qualified_certificate.EidasCertFormat;
 import com.train.gccn.model.report.Report;
 import com.train.gccn.model.report.ReportStatus;
 import com.train.gccn.model.tpl.TplApiListener;
-import com.train.gccn.wrapper.TrustDiscoveryWrapper;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 
@@ -246,8 +245,8 @@ public abstract class AbstractFormatParser implements FormatParser {
         String discoveryPointer = (String) cachedResolvedObj.mValue;
         AbstractFormatParser.logger.info("Looking up " + discoveryPointer + " ...");
     
-        String document = TrustDiscoveryWrapper.loadAndVerify(discoveryPointer, this.report);
-    
+        //String document = TrustDiscoveryWrapper.loadAndVerify(discoveryPointer, this.report);
+        String document = null;
         if(document == null) {
             AbstractFormatParser.logger.error("Loading of document failed from " + discoveryPointer);
             //document = "Demo blabla resolved from " + discoveryPointer;

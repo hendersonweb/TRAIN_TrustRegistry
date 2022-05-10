@@ -16,8 +16,6 @@ public class DNSHelper {
     public static final String DNS_GOOGLE1 = "8.8.8.8"; // https://developers.google.com/speed/public-dns/
     public static final String DNS_GOOGLE2 = "8.8.4.4"; // https://developers.google.com/speed/public-dns/
     public static final String DNS_CLOUDFLARE1 = "1.1.1.1"; // https://1.1.1.1/
-    public static final String DNS_ESSIF = "137.251.108.68";
-    public static final String DNS_FRAUNHOFER = "137.251.36.1";
     public static final String DNS_CLOUDFLARE2 = "1.0.0.1"; // https://1.0.0.1/
     public static final String DNS_CLOUDFLARE1v6 = "[2606:4700:4700::1111]";
     public static final String DNS_CLOUDFLARE2v6 = "[2606:4700:4700::1001]";
@@ -42,10 +40,8 @@ public class DNSHelper {
     private final Resolver resolver;
     
     public DNSHelper() throws IOException {
-        //this(DNSHelper.DNS_FRAUNHOFER);
         //this(DNSHelper.DNS_CLOUDFLARE1);
         this(DNSHelper.DNS_GOOGLE1);
-        //this(DNSHelper.DNS_ESSIF);
     }
     
     public DNSHelper(String dnsServerHostname) throws IOException {

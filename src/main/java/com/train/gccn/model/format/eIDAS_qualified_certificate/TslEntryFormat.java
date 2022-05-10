@@ -1,9 +1,9 @@
-package eu.lightest.verifier.model.format.eIDAS_qualified_certificate;
+package com.train.gccn.model.format.eIDAS_qualified_certificate;
 
 import eu.lightest.horn.specialKeywords.HornApiException;
-import eu.lightest.verifier.model.format.AbstractFormatParser;
-import eu.lightest.verifier.model.report.Report;
-import eu.lightest.verifier.model.trustscheme.TslEntry;
+import com.train.gccn.model.format.AbstractFormatParser;
+import com.train.gccn.model.report.Report;
+import com.train.gccn.model.trustscheme.TslEntry;
 import org.apache.log4j.Logger;
 
 import java.util.List;

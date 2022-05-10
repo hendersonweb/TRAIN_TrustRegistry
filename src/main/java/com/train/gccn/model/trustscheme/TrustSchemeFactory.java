@@ -52,7 +52,7 @@ public class TrustSchemeFactory {
         }
     
         if(ATVConfiguration.get().getBoolean("dane_verification_enabled") == true) {
-            boolean tslValid = TrustSchemeFactory.verifyTrustList(schemeHostname, tslContent);
+            boolean tslValid = false;
         
             if(tslValid == true) {
                 report.addLine("Trust Status List Signature validation successful.", ReportStatus.OK);
@@ -69,10 +69,10 @@ public class TrustSchemeFactory {
         return scheme;
     }
     
-    private static boolean verifyTrustList(String schemeHostname, String tslContent) throws IOException {
+   /* private static boolean verifyTrustList(String schemeHostname, String tslContent) throws IOException {
         return SMIMEAHelper.verifyXMLdocument(schemeHostname, tslContent);
         
-    }
+    } */
     
     private static String loadTrustList(String schemeHostname, String tslLocation, Report report) {
         try {

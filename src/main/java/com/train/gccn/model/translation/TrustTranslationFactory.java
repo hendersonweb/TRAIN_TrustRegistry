@@ -1,7 +1,6 @@
 package com.train.gccn.model.translation;
 
 import com.train.gccn.model.report.Report;
-import com.train.gccn.wrapper.TrustDiscoveryWrapper;
 import com.train.gccn.wrapper.XMLUtil;
 import org.apache.log4j.Logger;
 import org.w3c.dom.Node;
@@ -21,7 +20,8 @@ public class TrustTranslationFactory {
     
     public static TrustTranslation createTranslation(TranslationPointer pointer, Report report) throws IOException {
         
-        String translationDoc = TrustDiscoveryWrapper.loadAndVerify(pointer.getPointer(), report);
+        //String translationDoc = TrustDiscoveryWrapper.loadAndVerify(pointer.getPointer(), report);
+        String translationDoc = null;
         if(translationDoc == null) {
             return null;
         }

@@ -1,4 +1,4 @@
-package eu.lightest.verifier.model.format;
+package com.train.gccn.model.format;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
